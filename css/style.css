@@ -119,6 +119,64 @@ header {
     header a:hover {
       text-decoration: underline; }
 
+section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+  padding: 1rem 6rem; }
+  section .card-info {
+    grid-column: 1/2; }
+    section .card-info__text {
+      display: inline;
+      letter-spacing: 5px;
+      color: #a0a1ac;
+      text-transform: uppercase; }
+    section .card-info__rond {
+      background-color: #242942;
+      color: #fff;
+      border-radius: 70px;
+      font-size: 20px;
+      padding: 0.4em .4em;
+      margin-right: 1rem;
+      font-weight: 700; }
+    section .card-info__titre {
+      width: 80%;
+      font-size: 2.5em;
+      margin: 5% 0 3%;
+      color: #242942;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-style: bolder; }
+    section .card-info__text1 {
+      width: 55%;
+      font-size: 1.6rem;
+      color: #5b5f71;
+      margin-bottom: 3%; }
+    section .card-info__btn {
+      padding: 1.5em 2.3em;
+      margin-top: 5%;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff5c5c;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 700; }
+    section .card-info__text2 {
+      margin-left: 1.5em;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #a0a1ac; }
+  section .card-image {
+    grid-column: 2/3; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
 @media (max-width: 900px) {
   header nav {
     display: flex; }

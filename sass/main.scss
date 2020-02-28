@@ -156,6 +156,79 @@ header {
 }
 
 ////////////////End header//////////////
+//Start section//
+section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    overflow: hidden;
+    padding: 1rem 6rem;
+    .card-info {
+        grid-column: 1/2;
+        &__text {
+            display: inline;
+            letter-spacing: 5px;
+            color: $childcolor;
+            text-transform: uppercase;
+        }
+        &__rond {
+            background-color: $maincolor;
+            color: #fff;
+            border-radius: 70px;
+            font-size: 20px;
+            padding: 0.4em .4em;
+            margin-right: 1rem;
+            font-weight: 700;
+        }
+        &__titre {
+            width: 80%;
+            font-size: 2.5em;
+            margin: 5% 0 3%;
+            color: $maincolor;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-style: bolder;
+        }
+        &__text1 {
+            width: 55%;
+            font-size: 1.6rem;
+            color: hsl(230, 11%, 40%);
+            margin-bottom: 3%;
+        }
+        &__btn {
+            padding: 1.5em 2.3em;
+            margin-top: 5%;
+            border: none;
+            border-radius: 5px;
+            background-color: hsl(0, 100%, 68%);
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        &__text2 {
+            margin-left: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: $childcolor;
+        }
+    }
+    .card-image {
+        grid-column: 2/3;
+    }
+}
+
+//End section//
+//Start footer//
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+//End footer//
 //start media query///
 @media (max-width: 900px) {
     header {
