@@ -21,8 +21,8 @@ body::after {
   position: absolute;
   top: 0;
   right: 0;
-  width: 55vw;
-  height: 60vh;
+  width: 55%;
+  height: 60%;
   border-bottom-left-radius: 50px;
   background: #eef2f6;
   z-index: -1; }
