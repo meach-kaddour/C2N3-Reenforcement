@@ -84,7 +84,7 @@ body::after {
         padding-top: 1rem; }
 
 header {
-  padding: 3rem 6rem;
+  padding: 3rem 9rem;
   margin-bottom: 2rem; }
   header img {
     width: 30px; }
@@ -97,12 +97,13 @@ header {
     align-items: center;
     margin-left: auto;
     justify-content: space-around;
-    font-size: 16px; }
+    font-weight: 700; }
   header li {
     margin-left: 3rem;
     position: relative; }
     header li:last-child {
-      margin-left: 6rem; }
+      margin-left: 6rem;
+      color: #a0a1ac; }
       header li:last-child:before {
         content: '';
         position: absolute;
@@ -113,23 +114,27 @@ header {
         border-radius: 50%;
         background: #5a5e71; }
   header a {
-    color: #242941;
+    color: #242942;
     font-weight: 700;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    text-transform: uppercase; }
     header a:hover {
       text-decoration: underline; }
+  header .light-link {
+    color: #a0a1ac; }
 
 section {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 100%;
-  overflow: hidden;
-  padding: 1rem 6rem; }
+  grid-gap: 1rem;
+  padding-left: 8rem; }
   section .card-info {
-    grid-column: 1/2; }
+    grid-column: 1/2;
+    padding-left: .6rem; }
     section .card-info__text {
       display: inline;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       color: #a0a1ac;
       text-transform: uppercase; }
     section .card-info__rond {
@@ -138,12 +143,10 @@ section {
       border-radius: 70px;
       font-size: 20px;
       padding: 0.4em .4em;
-      margin-right: 1rem;
-      font-weight: 700; }
+      margin-right: 1rem; }
     section .card-info__titre {
-      width: 80%;
-      font-size: 2.5em;
-      margin: 5% 0 3%;
+      font-size: 4rem;
+      margin: 5% 0 5%;
       color: #242942;
       font-weight: 700;
       text-transform: uppercase;
@@ -155,13 +158,14 @@ section {
       margin-bottom: 3%; }
     section .card-info__btn {
       padding: 1.5em 2.3em;
-      margin-top: 5%;
+      margin-top: 3rem;
       border: none;
       border-radius: 5px;
       background-color: #ff5c5c;
       color: #fff;
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      box-shadow: 0 0 4px 0px black; }
     section .card-info__text2 {
       margin-left: 1.5em;
       text-transform: uppercase;
