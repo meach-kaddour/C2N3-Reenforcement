@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
     <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Project tracking intro component</title>
-
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    Product Features Pricing Login New Monograph Dashboard Powerful insights
-    into your team Project planning and time tracking for agile teams Schedule a
-    demo to see a live preview
 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.svg" alt="logo">
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#" class="light-link">Login</a></li>
+            </ul>
+            <div class="drop-down">
+                <input type="checkbox" class="drop-down__put" />
+                <div class="drop-down__hamburger">
+                    <img src="images/icon-hamburger.svg" alt="menu">
+                </div>
+                <div class="drop-down__menu">
+                    <div>
+                        <a href="">PRODUCT</a>
+                        <a href="">FEATURES</a>
+                        <a href="">PRICING</a>
+                        <a href="">LOGIN</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="card-info">
+            <p class="card-info__text"><span class="card-info__rond">New </span> Monograph Dashboard </p>
+            <h1 class="card-info__titre">Powerful insights into your team</h1>
+            <p class="card-info__text1 ">Project planning and time tracking for agile teams</p>
+            <button class="card-info__btn ">Schedule a demo</button>
+            <span class="card-info__text2 ">to see a preview</span>
+        </div>
+        <div class="card-image ">
+            <img src="images/illustration-devices.svg " alt="learn ">
+        </div>
+    </section>
     <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
+        <p class="attribution ">Coded by <a href="# ">kaddour</a>.</p>
     </footer>
-  </body>
+</body>
+
 </html>
