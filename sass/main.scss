@@ -1,11 +1,108 @@
-            $mainfont:'Barlow Condensed',
-            sans-serif;
-            $maincolor: hsl(230, 29%, 20%);
-            $childcolor:hsl(231, 7%, 65%);
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+$mainfont:'Barlow Condensed',
+sans-serif;
+$maincolor: hsl(230, 29%, 20%);
+$childcolor:hsl(231, 7%, 65%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//////////////////////proprotié global////////////////
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: $mainfont;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+//backrounad gris//
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 60%;
+    border-bottom-left-radius: 50px;
+    background: hsl(210, 31%, 95%);
+    z-index: -1;
+}
+
+///////////////////////////////////// Start mobile navbar/////////////////////
+.drop-down {
+    &__humberger {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 0px;
+        bottom: -15px;
+    }
+    &__put {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: -5px;
+        bottom: -22px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+        &:checked {
+            &~.drop-down__menu {
+                visibility: visible;
+                transform: scale(1);
+                transition-duration: 400ms;
+                &>div {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 6rem auto;
+        max-height: 240px;
+        max-width: 300px;
+        visibility: hidden;
+        z-index: 1;
+        transform: scale(0);
+        box-shadow: 1px 3px 20px rgba(0, 0, 0, .2);
+        background: #fff;
+        &>div {
+            opacity: 0;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & a {
+                margin: 1rem 0;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:last-child {
+                    border-top: 1px solid black;
+                    padding-top: 1rem;
+                }
             }
             
             //////////////////////proprotié global////////////////
