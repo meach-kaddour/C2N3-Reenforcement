@@ -14,7 +14,8 @@ img {
 
 body {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  overflow-x: hidden; }
 
 body::after {
   content: '';
@@ -56,7 +57,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 7rem auto;
+  margin: 6rem 3rem;
   max-height: 240px;
   max-width: 300px;
   visibility: hidden;
@@ -199,9 +200,10 @@ section {
     grid-template-rows: 50% 50%;
     padding: 1EM; }
     section .card-info {
-      grid-row: 2/4;
+      grid-row: 2/3;
       grid-column: 1/2;
-      margin-left: 1em; }
+      margin-left: 1em;
+      margin-top: 5%; }
       section .card-info__text {
         font-size: 1.6em; }
       section .card-info__titre {
@@ -217,11 +219,31 @@ section {
       margin-top: 2em; } }
 
 @media (max-width: 767px) {
+  body {
+    overflow-x: hidden; }
   header {
-    padding: 2EM; }
-  section {
-    overflow-x: hidden;
-    padding: 0;
-    margin-top: 4em; }
-    section .card-image {
-      margin: 3em 0 0 .6em; } }
+    padding: 3em; }
+  section .card-image {
+    margin: 2em 0 0 .3em;
+    width: 500px; }
+  section .card-info {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-left: 1em; }
+    section .card-info__text {
+      font-size: 1em; }
+    section .card-info__titre {
+      font-size: 3rem;
+      max-width: 100%; }
+    section .card-info__text1 {
+      width: 85%;
+      font-size: 1.4rem;
+      margin-bottom: 2%; }
+    section .card-info__btn {
+      padding: 1em 1em;
+      margin-top: 2rem;
+      font-size: 14px; }
+    section .card-info__text2 {
+      margin-left: .6em;
+      letter-spacing: 3px;
+      font-size: 14px; } }
