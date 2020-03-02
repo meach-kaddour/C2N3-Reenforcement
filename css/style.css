@@ -57,7 +57,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 6rem 3rem;
+  margin: 6rem auto;
   max-height: 240px;
   max-width: 300px;
   visibility: hidden;
@@ -128,11 +128,10 @@ section {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 100%;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   padding-left: 8rem; }
   section .card-info {
-    grid-column: 1/2;
-    padding-left: .6rem; }
+    grid-column: 1/2; }
     section .card-info__text {
       display: inline;
       letter-spacing: 4px;
@@ -182,9 +181,10 @@ section {
 .attribution a {
   color: #3e52a3; }
 
-@media (max-width: 1200px) {
+@media (max-width: 968px) {
   header {
-    padding: 4Rem; }
+    max-width: 90%;
+    margin: 5% auto; }
     header nav {
       display: flex; }
       header nav ul {
@@ -196,14 +196,13 @@ section {
         position: relative; }
   section {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    padding: 1EM; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "info";
+    grid-template-rows: 1fr;
+    padding: 0 0 0 1rem; }
     section .card-info {
-      grid-row: 2/3;
-      grid-column: 1/2;
-      margin-left: 1em;
-      margin-top: 5%; }
+      grid-area: info;
+      padding: 0 4rem 0 4rem; }
       section .card-info__text {
         font-size: 1.6em; }
       section .card-info__titre {
@@ -212,38 +211,36 @@ section {
       section .card-info__text2 {
         margin-left: .6em; }
     section .card-image {
-      grid-row: 1/2;
-      grid-column: 1/2;
-      width: 100%;
-      height: 100%;
-      margin-top: 2em; } }
+      grid-area: image;
+      padding: 0 0 0 1rem; } }
 
 @media (max-width: 767px) {
-  body {
-    overflow-x: hidden; }
+  body::after {
+    height: 110vh; }
   header {
-    padding: 3em; }
-  section .card-image {
-    margin: 2em 0 0 .3em;
-    width: 500px; }
-  section .card-info {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    margin-left: 1em; }
-    section .card-info__text {
-      font-size: 1em; }
-    section .card-info__titre {
-      font-size: 3rem;
-      max-width: 100%; }
-    section .card-info__text1 {
-      width: 85%;
-      font-size: 1.4rem;
-      margin-bottom: 2%; }
-    section .card-info__btn {
-      padding: 1em 1em;
-      margin-top: 2rem;
-      font-size: 14px; }
-    section .card-info__text2 {
-      margin-left: .6em;
-      letter-spacing: 3px;
-      font-size: 14px; } }
+    padding: 2rem 1rem;
+    width: 100%; }
+  section {
+    margin-top: 6rem; }
+    section .card-image {
+      width: 100vw;
+      margin: 0;
+      padding: 0; }
+    section .card-info {
+      width: 100%;
+      padding: 0 1rem 0 0;
+      grid-row-gap: .75rem;
+      margin: 0;
+      padding: 0 0 0 .6em; }
+      section .card-info__text {
+        font-size: 1em; }
+      section .card-info__titre {
+        font-size: 3rem;
+        width: 100%; }
+      section .card-info__text1 {
+        width: 95%; }
+      section .card-info__btn {
+        font-size: 14px;
+        padding: 1em 1em; }
+      section .card-info__text2 {
+        font-size: 14px; } }
