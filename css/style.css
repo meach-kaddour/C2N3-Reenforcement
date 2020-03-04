@@ -28,12 +28,15 @@ body::after {
   background: #eef2f6;
   z-index: -1; }
 
-.drop-down__humberger {
-  position: absolute;
+.drop-down__hamburger {
+  position: relative;
   width: 30px;
-  height: 30px;
-  right: 0px;
-  bottom: -15px; }
+  height: 30px; }
+  .drop-down__hamburger--close {
+    position: absolute;
+    visibility: hidden; }
+  .drop-down__hamburger--symbole {
+    position: absolute; }
 
 .drop-down__put {
   position: absolute;
@@ -50,6 +53,10 @@ body::after {
     transition-duration: 400ms; }
     .drop-down__put:checked ~ .drop-down__menu > div {
       opacity: 1; }
+  .drop-down__put:checked ~ .drop-down__hamburger .drop-down__hamburger--symbole {
+    visibility: hidden; }
+  .drop-down__put:checked ~ .drop-down__hamburger .drop-down__hamburger--close {
+    visibility: visible; }
 
 .drop-down__menu {
   position: fixed;
@@ -66,7 +73,7 @@ body::after {
   box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.2);
   background: #fff; }
   .drop-down__menu > div {
-    opacity: 0;
+    opacity: 1;
     z-index: 2;
     height: 100%;
     width: 100%;
